@@ -15,6 +15,8 @@
 		04834AC822432D720076F341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04834AC622432D720076F341 /* LaunchScreen.storyboard */; };
 		04834AD322432D720076F341 /* RoomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834AD222432D720076F341 /* RoomateTests.swift */; };
 		04834ADE22432D720076F341 /* RoomateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834ADD22432D720076F341 /* RoomateUITests.swift */; };
+		04834AEC22433D650076F341 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834AEB22433D650076F341 /* RoundedButton.swift */; };
+		04834AEE224342240076F341 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834AED224342240076F341 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		04834AD922432D720076F341 /* RoomateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoomateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04834ADD22432D720076F341 /* RoomateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomateUITests.swift; sourceTree = "<group>"; };
 		04834ADF22432D720076F341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04834AEB22433D650076F341 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		04834AED224342240076F341 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				04834AC622432D720076F341 /* LaunchScreen.storyboard */,
 				04834AC922432D720076F341 /* Info.plist */,
 				04834AC122432D710076F341 /* Roomate.xcdatamodeld */,
+				04834AEB22433D650076F341 /* RoundedButton.swift */,
+				04834AED224342240076F341 /* TabBarController.swift */,
 			);
 			path = Roomate;
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 				04834ABD22432D710076F341 /* ViewController.swift in Sources */,
 				04834AC322432D710076F341 /* Roomate.xcdatamodeld in Sources */,
 				04834ABB22432D710076F341 /* AppDelegate.swift in Sources */,
+				04834AEE224342240076F341 /* TabBarController.swift in Sources */,
+				04834AEC22433D650076F341 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
