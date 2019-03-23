@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VGY-QW-Npd">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,28 +10,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Room-->
+        <!--Calender-->
         <scene sceneID="pr6-tp-s2l">
             <objects>
-                <viewController id="OXM-KL-Ude" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eWA-um-jf9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewController id="OXM-KL-Ude" customClass="ViewController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ph-tL-3Nz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-QM-LYE" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="357.00000000000023"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <viewLayoutGuide key="safeArea" id="QCh-k7-eYL"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="KJT-Hm-FYX"/>
+                        <viewLayoutGuide key="safeArea" id="g41-fj-Wmw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Room" id="VRB-op-Tvl"/>
+                    <tabBarItem key="tabBarItem" title="Calender" id="VRB-op-Tvl"/>
+                    <connections>
+                        <outlet property="calendar" destination="ZCA-QM-LYE" id="jRt-S3-XVv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Iv-8g-SgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="490"/>
+            <point key="canvasLocation" x="365.21739130434787" y="510.26785714285711"/>
         </scene>
         <!--Me-->
         <scene sceneID="EKW-X3-aO7">
             <objects>
                 <viewController id="j4x-xA-wAV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uAX-fB-OL4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="417-7E-wDW"/>
@@ -40,34 +50,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqV-6t-Qsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="1840"/>
+            <point key="canvasLocation" x="366" y="1907"/>
         </scene>
-        <!--Dates-->
+        <!--Expense-->
         <scene sceneID="OL7-Al-8Bf">
             <objects>
                 <viewController id="Jip-q7-qL8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y4S-n7-RFR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ks4-X1-Tay"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dates" id="Umr-5Q-uKh"/>
+                    <tabBarItem key="tabBarItem" title="Expense" id="Umr-5Q-uKh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLv-aq-8yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="1164"/>
+            <point key="canvasLocation" x="366" y="1208"/>
         </scene>
         <!--Home-->
         <scene sceneID="pHs-R6-RGK">
             <objects>
                 <viewController id="1kz-72-ytr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODv-fD-A0B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zi1-8X-RNq" customClass="RoundButton" customModule="Roomate" customModuleProvider="target">
-                                <rect key="frame" x="53" y="125" width="306" height="100"/>
+                                <rect key="frame" x="53" y="187" width="306" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="My Room" backgroundImage="Screen Shot 2019-03-20 at 11.26.58 PM">
@@ -83,17 +93,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAa-Zv-cRg">
-                                <rect key="frame" x="53" y="61" width="181" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5u-rQ-D1u" customClass="RoundButton" customModule="Roomate" customModuleProvider="target">
-                                <rect key="frame" x="53" y="242" width="97" height="100"/>
+                                <rect key="frame" x="53" y="312" width="156" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Chore" backgroundImage="Screen Shot 2019-03-20 at 11.26.58 PM">
                                     <color key="titleColor" red="1" green="0.98094851260000004" blue="0.99727456950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -107,28 +110,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mH9-Vu-LIb" customClass="RoundButton" customModule="Roomate" customModuleProvider="target">
-                                <rect key="frame" x="157" y="242" width="97" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Bills" backgroundImage="Screen Shot 2019-03-20 at 11.26.58 PM">
-                                    <color key="titleColor" red="1" green="0.98094851260000004" blue="0.99727456950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSI-Kk-7BZ" customClass="RoundButton" customModule="Roomate" customModuleProvider="target">
-                                <rect key="frame" x="262" y="242" width="97" height="100"/>
+                                <rect key="frame" x="53" y="432" width="306" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Dates" backgroundImage="Screen Shot 2019-03-20 at 11.26.58 PM">
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Notifications" backgroundImage="Screen Shot 2019-03-20 at 11.26.58 PM">
                                     <color key="titleColor" red="1" green="0.98094851260000004" blue="0.99727456950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -141,6 +127,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mH9-Vu-LIb" customClass="RoundButton" customModule="Roomate" customModuleProvider="target">
+                                <rect key="frame" x="217" y="312" width="142" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Expense" backgroundImage="Screen Shot 2019-03-20 at 11.26.58 PM">
+                                    <color key="titleColor" red="1" green="0.98094851260000004" blue="0.99727456950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAa-Zv-cRg">
+                                <rect key="frame" x="53" y="110" width="181" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="os4-uD-1lz"/>
@@ -154,7 +164,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Rek-Lh-BJL">
             <objects>
-                <tabBarController id="VGY-QW-Npd" customClass="TabBarController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="VGY-QW-Npd" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oSn-DT-voU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
