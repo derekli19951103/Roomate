@@ -17,6 +17,7 @@
 		04834ADE22432D720076F341 /* RoomateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834ADD22432D720076F341 /* RoomateUITests.swift */; };
 		04834AEC22433D650076F341 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834AEB22433D650076F341 /* RoundedButton.swift */; };
 		04D1915C224EC62000E47F8D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1915B224EC62000E47F8D /* UserModel.swift */; };
+		04D19161224ED04700E47F8D /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D19160224ED04700E47F8D /* Fetch.swift */; };
 		3BEAE94F72E99D07D491D628 /* Pods_Roomate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */; };
 		42F422ADD6EB9232BB1E92E3 /* Pods_RoomateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813DCB03F1AC6B4D63B4EED2 /* Pods_RoomateTests.framework */; };
 		884680FE224E9FCF00145BAE /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884680FD224E9FCF00145BAE /* InformationController.swift */; };
@@ -58,6 +59,7 @@
 		04834ADF22432D720076F341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04834AEB22433D650076F341 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		04D1915B224EC62000E47F8D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		04D19160224ED04700E47F8D /* Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
 		0DFEAFD40F8FD69D44F1A8CD /* Pods-RoomateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomateUITests.release.xcconfig"; path = "Target Support Files/Pods-RoomateUITests/Pods-RoomateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1AAF689A218B46B08C5F3114 /* Pods-Roomate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomate.debug.xcconfig"; path = "Target Support Files/Pods-Roomate/Pods-Roomate.debug.xcconfig"; sourceTree = "<group>"; };
 		565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 		04834AAE22432D700076F341 = {
 			isa = PBXGroup;
 			children = (
+				04D1915F224ED01E00E47F8D /* API */,
 				04D1915E224EC6BD00E47F8D /* Controllers */,
 				04D1915A224EC5B500E47F8D /* Models */,
 				04834AB922432D700076F341 /* Roomate */,
@@ -171,6 +174,14 @@
 				04834ABC22432D710076F341 /* CalendarController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04D1915F224ED01E00E47F8D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				04D19160224ED04700E47F8D /* Fetch.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		165507F03F89BC58D4A7C0EA /* Frameworks */ = {
@@ -422,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D19161224ED04700E47F8D /* Fetch.swift in Sources */,
 				04834ABD22432D710076F341 /* CalendarController.swift in Sources */,
 				04D1915C224EC62000E47F8D /* UserModel.swift in Sources */,
 				04834AC322432D710076F341 /* Roomate.xcdatamodeld in Sources */,

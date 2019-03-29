@@ -16,7 +16,7 @@ class InformationController: UIViewController {
     @IBOutlet weak var lastname: UITextField!
     
     @IBOutlet weak var email: UITextField!
-    
+
     
     @IBOutlet weak var password: UITextField!
     
