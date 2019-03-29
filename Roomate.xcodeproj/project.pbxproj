@@ -18,6 +18,8 @@
 		04834AEC22433D650076F341 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834AEB22433D650076F341 /* RoundedButton.swift */; };
 		3BEAE94F72E99D07D491D628 /* Pods_Roomate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */; };
 		42F422ADD6EB9232BB1E92E3 /* Pods_RoomateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813DCB03F1AC6B4D63B4EED2 /* Pods_RoomateTests.framework */; };
+		884680FE224E9FCF00145BAE /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884680FD224E9FCF00145BAE /* InformationController.swift */; };
+		88468100224EB5E600145BAE /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884680FF224EB5E600145BAE /* TestController.swift */; };
 		F0A8EDE7A0E145162095808C /* Pods_RoomateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC3A9FEC8FDD6AC6EA63A33 /* Pods_RoomateUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		1AAF689A218B46B08C5F3114 /* Pods-Roomate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomate.debug.xcconfig"; path = "Target Support Files/Pods-Roomate/Pods-Roomate.debug.xcconfig"; sourceTree = "<group>"; };
 		565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		813DCB03F1AC6B4D63B4EED2 /* Pods_RoomateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		884680FD224E9FCF00145BAE /* InformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
+		884680FF224EB5E600145BAE /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		8BC3A9FEC8FDD6AC6EA63A33 /* Pods_RoomateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B341C75A4A8C26C26E64AF /* Pods-RoomateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomateTests.debug.xcconfig"; path = "Target Support Files/Pods-RoomateTests/Pods-RoomateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF749F872DBB45CFA0CBA6CD /* Pods-RoomateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomateTests.release.xcconfig"; path = "Target Support Files/Pods-RoomateTests/Pods-RoomateTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				04834ABA22432D710076F341 /* AppDelegate.swift */,
 				04834ABC22432D710076F341 /* ViewController.swift */,
 				04834ABE22432D710076F341 /* Main.storyboard */,
+				884680FF224EB5E600145BAE /* TestController.swift */,
+				884680FD224E9FCF00145BAE /* InformationController.swift */,
 				04834AC422432D720076F341 /* Assets.xcassets */,
 				04834AC622432D720076F341 /* LaunchScreen.storyboard */,
 				04834AC922432D720076F341 /* Info.plist */,
@@ -400,7 +406,9 @@
 				04834ABD22432D710076F341 /* ViewController.swift in Sources */,
 				04834AC322432D710076F341 /* Roomate.xcdatamodeld in Sources */,
 				04834ABB22432D710076F341 /* AppDelegate.swift in Sources */,
+				88468100224EB5E600145BAE /* TestController.swift in Sources */,
 				04834AEC22433D650076F341 /* RoundedButton.swift in Sources */,
+				884680FE224E9FCF00145BAE /* InformationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
