@@ -25,17 +25,30 @@ class TestController: UIViewController {
     
     @IBOutlet weak var birth: UILabel!
     
-    var firstnameText = String()
-    var lastnameText = String()
-    var emailText = String()
-    var passwordText = String()
-    var passwordAgainText = String()
-    var telephoneText = String()
-    var birthText = String()
+    var firstnameText = ""
+    var lastnameText = ""
+    var emailText = ""
+    var passwordText = ""
+    var passwordAgainText = ""
+    var telephoneText = ""
+    var birthText = ""
     
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        firstname.text = firstnameText
+        lastname.text = lastnameText
+        email.text = emailText
+        password.text = passwordText
+        passwordAgain.text = passwordAgainText
+        telephone.text = telephoneText
+        birth.text = birthText
         
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
 }

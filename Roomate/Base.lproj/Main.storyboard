@@ -262,7 +262,7 @@
                         <outlet property="password" destination="rd7-AT-9Je" id="VCq-ab-jQP"/>
                         <outlet property="passwordAgain" destination="zai-Gq-UMN" id="fny-gr-RIE"/>
                         <outlet property="telephone" destination="qTr-qA-xnw" id="kSQ-Za-iap"/>
-                        <segue destination="Y31-xN-Ud2" kind="presentation" id="LPm-U3-4bx"/>
+                        <segue destination="Y31-xN-Ud2" kind="presentation" identifier="info" id="LPm-U3-4bx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Mg-V7-BLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
