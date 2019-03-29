@@ -347,7 +347,7 @@
         <!--Calender-->
         <scene sceneID="pr6-tp-s2l">
             <objects>
-                <viewController id="OXM-KL-Ude" customClass="ViewController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OXM-KL-Ude" customClass="CalendarController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ph-tL-3Nz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask"/>
