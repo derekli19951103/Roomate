@@ -102,6 +102,7 @@
 		04834AAE22432D700076F341 = {
 			isa = PBXGroup;
 			children = (
+				04D1915E224EC6BD00E47F8D /* Controllers */,
 				04D1915A224EC5B500E47F8D /* Models */,
 				04834AB922432D700076F341 /* Roomate */,
 				04834AD122432D720076F341 /* RoomateTests */,
@@ -126,10 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				04834ABA22432D710076F341 /* AppDelegate.swift */,
-				04834ABC22432D710076F341 /* CalendarController.swift */,
 				04834ABE22432D710076F341 /* Main.storyboard */,
-				884680FF224EB5E600145BAE /* TestController.swift */,
-				884680FD224E9FCF00145BAE /* InformationController.swift */,
 				04834AC422432D720076F341 /* Assets.xcassets */,
 				04834AC622432D720076F341 /* LaunchScreen.storyboard */,
 				04834AC922432D720076F341 /* Info.plist */,
@@ -163,6 +161,16 @@
 				04D1915B224EC62000E47F8D /* UserModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		04D1915E224EC6BD00E47F8D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				884680FD224E9FCF00145BAE /* InformationController.swift */,
+				884680FF224EB5E600145BAE /* TestController.swift */,
+				04834ABC22432D710076F341 /* CalendarController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		165507F03F89BC58D4A7C0EA /* Frameworks */ = {
