@@ -326,6 +326,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL6-7q-3Os">
+                                <rect key="frame" x="164" y="526" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="82C-fL-dbd" kind="show" id="fDO-Qj-5ew"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JqG-KE-GgX"/>
@@ -519,4 +527,7 @@
     <resources>
         <image name="Screen Shot 2019-03-20 at 11.26.58 PM" width="1440" height="814"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fDO-Qj-5ew"/>
+    </inferredMetricsTieBreakers>
 </document>
