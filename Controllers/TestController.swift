@@ -33,44 +33,43 @@ class TestController: UIViewController {
     var telephoneText = ""
     var birthText = ""
     
+    let dispatchGroup = DispatchGroup()
+    var dictionary:[String:Any] = [String:Any]()
+    
+    func fetchData(){
+        var paramsDictionary = [String:Any]()
+        paramsDictionary["email"] = "2"
+        paramsDictionary["password"] = "1"
+        
+        dispatchGroup.enter()
+        Fetch.instance().makeAPICall(url: "http://localhost:8080/user/login", params:paramsDictionary, method: HttpMethod.POST, success: { (data, response, error) in
+            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+            if let dictionary = json as? [String: Any] {
+                self.dictionary = dictionary
+                self.dispatchGroup.leave()
+            }
+        }, failure: { (data, response, error) in
+            print(error ?? "none")
+        })
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var paramsDictionary = [String:Any]()
+    
+//        firstname.text = firstnameText
+//        lastname.text = lastnameText
+//        email.text = emailText
+//        password.text = passwordText
+//        passwordAgain.text = passwordAgainText
+//        telephone.text = telephoneText
+//        birth.text = birthText
+        fetchData()
         
-        paramsDictionary["email"] = "1"
-        paramsDictionary["password"] = "1"
-        
-        Fetch.instance().makeAPICall(url: "http://localhost:8080/user/login", params:paramsDictionary, method: HttpMethod.POST, success: { (data, response, error) in
-            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
-            print(json!)
-            if let dictionary = json as? [String: Any] {
-                
-                self.firstname.text = dictionary["firstname"] as? String
-        
-                self.lastname.text = dictionary["lastname"] as? String
-        
-                self.email.text = dictionary["email"] as? String
-        
-                self.telephone.text = dictionary["tel"] as? String
-                
-                self.birth.text = dictionary["birth"] as? String
-                
-                }
-            
-        }, failure: { (data, response, error) in
-            
-            print(error ?? "none")
-            
-        })
-        firstname.text = firstnameText
-        lastname.text = lastnameText
-        email.text = emailText
-        password.text = passwordText
-        passwordAgain.text = passwordAgainText
-        telephone.text = telephoneText
-        birth.text = birthText
+        dispatchGroup.notify(queue: .main) {
+            self.firstname.text = self.dictionary["firstname"] as? String
+        }
         
     }
     
