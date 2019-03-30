@@ -16,15 +16,51 @@ enum HttpMethod : String {
     case  PUT
 }
 
+class Fetch {
+    var data:[String:Any] = [String:Any]()
+    var url:String?
+    var method:HttpMethod?
+    var params:[String:Any] = [String:Any]()
+    let dispatchGroup = DispatchGroup()
+    var delegate: FetchDelegate?
+    
+    init(url: String, method: HttpMethod, params: [String:Any]) {
+        self.url = url
+        self.method = method
+        self.params = params
+    }
+    
+    func call(){
+        dispatchGroup.enter()
+        HttpRequest.instance().makeAPICall(url: self.url!, params:self.params, method: self.method!, success: { (data, response, error) in
+            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+            if let dictionary = json as? [String: Any] {
+                self.data = dictionary
+                self.dispatchGroup.leave()
+            }
+        }, failure: { (data, response, error) in
+            print(error!)
+        })
+    }
+    
+    func then(){
+        call()
+        dispatchGroup.notify(queue: .main) {
+            self.delegate?.didFinish(self)
+        }
+    }
+    
+}
 
-class Fetch: NSObject{
+
+class HttpRequest: NSObject{
     
     //TODO: remove app transport security arbitary constant from info.plist file once we get API's
     var request : URLRequest?
     var session : URLSession?
     
-    static func instance() ->  Fetch{
-        return Fetch()
+    static func instance() ->  HttpRequest{
+        return HttpRequest()
     }
     
     func makeAPICall(url: String,params: Dictionary<String, Any>?, method: HttpMethod, success:@escaping ( Data? ,HTTPURLResponse?  , NSError? ) -> Void, failure: @escaping ( Data? ,HTTPURLResponse?  , NSError? )-> Void) {
@@ -39,9 +75,8 @@ class Fetch: NSObject{
             let  jsonData = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
             
             request?.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request?.httpBody = jsonData//?.base64EncodedData()
-            
-            //paramString.data(using: String.Encoding.utf8)
+            request?.httpBody = jsonData
+
         }
         request?.httpMethod = method.rawValue
         
@@ -52,8 +87,6 @@ class Fetch: NSObject{
         configuration.timeoutIntervalForResource = 30
         
         session = URLSession(configuration: configuration)
-        //session?.configuration.timeoutIntervalForResource = 5
-        //session?.configuration.timeoutIntervalForRequest = 5
         
         session?.dataTask(with: request! as URLRequest) { (data, response, error) -> Void in
             

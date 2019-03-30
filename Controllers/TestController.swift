@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TestController: UIViewController {
+class TestController: UIViewController,FetchDelegate {
     
     @IBOutlet weak var firstname: UILabel!
     
@@ -33,25 +33,28 @@ class TestController: UIViewController {
     var telephoneText = ""
     var birthText = ""
     
-    let dispatchGroup = DispatchGroup()
-    var dictionary:[String:Any] = [String:Any]()
+//    let dispatchGroup = DispatchGroup()
+//    var dictionary:[String:Any] = [String:Any]()
+//    
+    var fetch:Fetch?
+    var fetch2:Fetch?
     
-    func fetchData(){
-        var paramsDictionary = [String:Any]()
-        paramsDictionary["email"] = "2"
-        paramsDictionary["password"] = "1"
-        
-        dispatchGroup.enter()
-        Fetch.instance().makeAPICall(url: "http://localhost:8080/user/login", params:paramsDictionary, method: HttpMethod.POST, success: { (data, response, error) in
-            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
-            if let dictionary = json as? [String: Any] {
-                self.dictionary = dictionary
-                self.dispatchGroup.leave()
-            }
-        }, failure: { (data, response, error) in
-            print(error ?? "none")
-        })
-    }
+//    func fetchData(){
+//        var paramsDictionary = [String:Any]()
+//        paramsDictionary["email"] = "2"
+//        paramsDictionary["password"] = "1"
+//
+//        dispatchGroup.enter()
+//        Fetch.instance().makeAPICall(url: "http://localhost:8080/user/login", params:paramsDictionary, method: HttpMethod.POST, success: { (data, response, error) in
+//            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+//            if let dictionary = json as? [String: Any] {
+//                self.dictionary = dictionary
+//                self.dispatchGroup.leave()
+//            }
+//        }, failure: { (data, response, error) in
+//            print(error ?? "none")
+//        })
+//    }
     
     
     
@@ -65,16 +68,28 @@ class TestController: UIViewController {
 //        passwordAgain.text = passwordAgainText
 //        telephone.text = telephoneText
 //        birth.text = birthText
-        fetchData()
-        
-        dispatchGroup.notify(queue: .main) {
-            self.firstname.text = self.dictionary["firstname"] as? String
-        }
+        var paramsDictionary = [String:Any]()
+        paramsDictionary["email"] = "2"
+        paramsDictionary["password"] = "1"
+        fetch = Fetch(url: "http://localhost:8080/user/login",method: HttpMethod.POST,params:paramsDictionary)
+        fetch?.delegate = self
+        fetch?.then()
+        var paramsDictionary2 = [String:Any]()
+        paramsDictionary2["email"] = "1"
+        paramsDictionary2["password"] = "1"
+        fetch2 = Fetch(url: "http://localhost:8080/user/login",method: HttpMethod.POST,params:paramsDictionary2)
+        fetch2?.delegate = self
+        fetch2?.then()
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func didFinish(_ sender: Fetch){
+        firstname.text = fetch?.data["firstname"] as? String
+        lastname.text = fetch2?.data["lastname"] as? String
     }
     
 }
