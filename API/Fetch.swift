@@ -39,7 +39,7 @@ class Fetch {
                 self.dispatchGroup.leave()
             }
         }, failure: { (data, response, error) in
-            print(error!)
+            print(error ?? "error fetching")
         })
     }
     
