@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class SignController: UIViewController,FetchDelegate {
+class SigninController: UIViewController,FetchDelegate {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -30,11 +30,11 @@ class SignController: UIViewController,FetchDelegate {
     }
     
     func didFinish(_ sender: Fetch) {
-        let name = fetch?.data["firstname"]! as! String
-        let alertController = UIAlertController(title: "Success", message:
-            "loggin as:"+name, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-        self.present(alertController, animated: true, completion: nil)
+        let user = UserModel(data: fetch!.data)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let tab = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+        tab.user = user
+        self.present(tab, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

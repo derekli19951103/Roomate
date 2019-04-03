@@ -28,21 +28,29 @@ class UserModel: NSObject {
         
     }
     
-    //construct with @name, @address, @latitude, and @longitude parameters
-    
-    init(id: Int, firstname: String, lastname: String, birth: String, avatar: String, email: String, tel: String, password: String) {
+    init(data: [String:Any]) {
         
-        self.id = id
-        self.firstname = firstname
-        self.lastname = lastname
-        self.birth = birth
-        self.avatar = avatar
-        self.email = email
-        self.tel = tel
-        self.password = password
+        self.id = data["id"] as? Int
+        self.firstname = data["firstname"] as? String
+        self.lastname = data["lastname"] as? String
+        self.birth = data["birth"] as? String
+        self.avatar = data["avatar"] as? String
+        self.email = data["email"] as? String
+        self.tel = data["tel"] as? String
+        self.password = data["password"] as? String
         
     }
     
+    func to_dict(){
+        var paramsDictionary = [String:Any]()
+        paramsDictionary["firstname"]=firstname
+        paramsDictionary["lastname"]=lastname
+        paramsDictionary["birth"]=birth
+        paramsDictionary["avatar"]=avatar
+        paramsDictionary["email"]=email
+        paramsDictionary["tel"]=tel
+        paramsDictionary["password"]=password
+    }
     
     //prints object's current state
     
