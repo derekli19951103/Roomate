@@ -13,7 +13,6 @@
         <!--SignInView-->
         <scene sceneID="BVK-w2-va2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vUd-ni-VNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SigninController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="opy-m4-cbf" userLabel="SignInView" customClass="SigninController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bMe-nU-Nw0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -46,7 +45,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Log in"/>
                                 <connections>
-                                    <action selector="login:" destination="opy-m4-cbf" eventType="touchUpInside" id="aII-IJ-zmQ"/>
+                                    <action selector="login:" destination="opy-m4-cbf" eventType="touchUpInside" id="cgI-bv-3Yr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPY-i1-KgJ">
@@ -55,7 +54,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
-                                    <segue destination="ScX-3V-nPv" kind="show" id="9gT-4K-Ogm"/>
+                                    <segue destination="ScX-3V-nPv" kind="show" id="ppj-4c-AO5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,18 +62,18 @@
                         <viewLayoutGuide key="safeArea" id="tNy-6E-t9y"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="2br-UR-5FC" id="rw2-Ul-d18"/>
-                        <outlet property="password" destination="Mgs-aY-Gvk" id="iFx-Mh-eJw"/>
+                        <outlet property="email" destination="2br-UR-5FC" id="IXw-XL-l2W"/>
+                        <outlet property="password" destination="Mgs-aY-Gvk" id="eRZ-ZY-Bjv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUd-ni-VNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5352" y="1321"/>
         </scene>
         <!--RegisterInfoView-->
         <scene sceneID="fct-7n-1J3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cSa-LJ-MOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ScX-3V-nPv" userLabel="RegisterInfoView" customClass="RegisterController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ScX-3V-nPv" userLabel="RegisterInfoView" customClass="RegisterController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nlw-qx-dy4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +161,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="register:" destination="ScX-3V-nPv" eventType="touchUpInside" id="8b0-0g-Jn2"/>
+                                    <action selector="register:" destination="ScX-3V-nPv" eventType="touchUpInside" id="Fis-9l-f7s"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password Again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBb-V0-Ffh">
@@ -184,14 +183,15 @@
                         <viewLayoutGuide key="safeArea" id="R6V-mq-EOP"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="9qj-Zb-HQO" id="Vf7-1r-QEm"/>
-                        <outlet property="firstname" destination="04y-Hz-JeO" id="Pty-kx-5xe"/>
-                        <outlet property="lastname" destination="Un8-xo-q3P" id="ID0-Tf-J0b"/>
-                        <outlet property="password" destination="VQ1-LC-e7Q" id="2bQ-iH-piU"/>
-                        <outlet property="passwordii" destination="S5h-ZE-Che" id="fSc-3Z-UJS"/>
-                        <outlet property="tel" destination="tgE-6s-Wqe" id="rSZ-em-y3T"/>
+                        <outlet property="email" destination="9qj-Zb-HQO" id="TKW-38-QFr"/>
+                        <outlet property="firstname" destination="04y-Hz-JeO" id="0rN-E4-rRL"/>
+                        <outlet property="lastname" destination="Un8-xo-q3P" id="rOM-xv-jyp"/>
+                        <outlet property="password" destination="VQ1-LC-e7Q" id="fyX-YL-Ixe"/>
+                        <outlet property="passwordii" destination="S5h-ZE-Che" id="OgR-uZ-RvN"/>
+                        <outlet property="tel" destination="tgE-6s-Wqe" id="xRR-l0-3PQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSa-LJ-MOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4323.188405797102" y="1320.5357142857142"/>
         </scene>

@@ -25,7 +25,7 @@ class RegisterController: UIViewController,FetchDelegate {
     }
     
     @IBAction func register(_ sender: Any) {
-        if(passwordii==password){
+        if(passwordii.text==password.text){
             var paramsDictionary = [String:Any]()
             paramsDictionary["firstname"]=firstname.text
             paramsDictionary["lastname"]=lastname.text
@@ -35,6 +35,10 @@ class RegisterController: UIViewController,FetchDelegate {
             fetch = Fetch(url: "http://localhost:8080/user/add",method: HttpMethod.POST,params:paramsDictionary)
             fetch?.delegate = self
             fetch?.then()
+        }else{
+            let alert = UIAlertController(title: "Alert", message: "Please enter the same password", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

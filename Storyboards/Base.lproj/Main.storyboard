@@ -57,7 +57,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" id="ZAW-dL-yLr"/>
                     <connections>
-                        <outlet property="firstname" destination="Waf-ko-b4O" id="v5k-Yg-jtL"/>
+                        <outlet property="firstname" destination="Waf-ko-b4O" id="2mg-DP-Izg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqV-6t-Qsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
