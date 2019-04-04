@@ -16,8 +16,8 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(viewControllers![3])
-        let userinfo = viewControllers![3] as! UserInfoController
-        userinfo.user = user
+//        let userinfo = viewControllers![3] as! UserInfoController
+//        userinfo.user = user
     }
     
     override func didReceiveMemoryWarning() {
