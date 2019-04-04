@@ -23,6 +23,8 @@
 		04D1915C224EC62000E47F8D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1915B224EC62000E47F8D /* UserModel.swift */; };
 		04D19161224ED04700E47F8D /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D19160224ED04700E47F8D /* Fetch.swift */; };
 		04D191632250171E00E47F8D /* FetchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D191622250171E00E47F8D /* FetchDelegate.swift */; };
+		04E63DD12256B31F005943E9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E63DD02256B31F005943E9 /* NotificationController.swift */; };
+		04E63DD32256B5DF005943E9 /* SampleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E63DD22256B5DF005943E9 /* SampleTextField.swift */; };
 		3BEAE94F72E99D07D491D628 /* Pods_Roomate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */; };
 		42F422ADD6EB9232BB1E92E3 /* Pods_RoomateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813DCB03F1AC6B4D63B4EED2 /* Pods_RoomateTests.framework */; };
 		88468100224EB5E600145BAE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884680FF224EB5E600145BAE /* TabBarController.swift */; };
@@ -69,6 +71,8 @@
 		04D1915B224EC62000E47F8D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		04D19160224ED04700E47F8D /* Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
 		04D191622250171E00E47F8D /* FetchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDelegate.swift; sourceTree = "<group>"; };
+		04E63DD02256B31F005943E9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		04E63DD22256B5DF005943E9 /* SampleTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTextField.swift; sourceTree = "<group>"; };
 		0DFEAFD40F8FD69D44F1A8CD /* Pods-RoomateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomateUITests.release.xcconfig"; path = "Target Support Files/Pods-RoomateUITests/Pods-RoomateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1AAF689A218B46B08C5F3114 /* Pods-Roomate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomate.debug.xcconfig"; path = "Target Support Files/Pods-Roomate/Pods-Roomate.debug.xcconfig"; sourceTree = "<group>"; };
 		565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,11 +190,13 @@
 		04D1915E224EC6BD00E47F8D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				04E63DD22256B5DF005943E9 /* SampleTextField.swift */,
 				0404B0C12253235C0071C0AF /* RegisterController.swift */,
 				0404B0C32253397B0071C0AF /* SigninController.swift */,
 				884680FF224EB5E600145BAE /* TabBarController.swift */,
 				04834ABC22432D710076F341 /* CalendarController.swift */,
 				0404B0C9225435530071C0AF /* UserInfoController.swift */,
+				04E63DD02256B31F005943E9 /* NotificationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -372,12 +378,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Roomate/Pods-Roomate-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/Pilas/Pilas.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pilas.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -462,7 +470,9 @@
 				04D19161224ED04700E47F8D /* Fetch.swift in Sources */,
 				04D191632250171E00E47F8D /* FetchDelegate.swift in Sources */,
 				04834ABD22432D710076F341 /* CalendarController.swift in Sources */,
+				04E63DD32256B5DF005943E9 /* SampleTextField.swift in Sources */,
 				04D1915C224EC62000E47F8D /* UserModel.swift in Sources */,
+				04E63DD12256B31F005943E9 /* NotificationController.swift in Sources */,
 				04834AC322432D710076F341 /* Roomate.xcdatamodeld in Sources */,
 				04834ABB22432D710076F341 /* AppDelegate.swift in Sources */,
 				0404B0CA225435530071C0AF /* UserInfoController.swift in Sources */,

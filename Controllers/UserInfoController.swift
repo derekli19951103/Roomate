@@ -11,14 +11,11 @@ import UIKit
 class UserInfoController: UIViewController {
     
     var user:UserModel?
-    
-    
     @IBOutlet weak var firstname: UILabel!
-    
+
     override func viewDidLoad() {
-        firstname.text = user?.firstname
         super.viewDidLoad()
-        
+        firstname.text = user?.firstname
     }
     
     
