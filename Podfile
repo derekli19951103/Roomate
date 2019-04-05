@@ -7,7 +7,7 @@ target 'Roomate' do
   use_frameworks!
   pod 'FSCalendar'
   pod 'Pilas'
-
+  pod 'CardParts'
   # Pods for Roomate
 
   target 'RoomateTests' do
