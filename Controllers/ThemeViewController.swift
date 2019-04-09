@@ -26,7 +26,8 @@ class ThemeViewController: CardsViewController {
             ThemedCardController(title: "These"),
             ThemedCardController(title: "Are"),
             ThemedCardController(title: "Themed"),
-            ThemedCardController(title: "Cards!")
+            ThemedCardController(title: "Cards!"),
+            ThemedCardController(title: "These"),
         ]
         
         loadCards(cards: cards)

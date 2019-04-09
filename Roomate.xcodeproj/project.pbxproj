@@ -11,6 +11,7 @@
 		0404B0C42253397B0071C0AF /* SigninController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404B0C32253397B0071C0AF /* SigninController.swift */; };
 		0404B0C8225422020071C0AF /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0404B0C7225422020071C0AF /* Auth.storyboard */; };
 		0404B0CA225435530071C0AF /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404B0C9225435530071C0AF /* UserInfoController.swift */; };
+		04436870225C284900AB5DD8 /* ThemedCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443686F225C284900AB5DD8 /* ThemedCardController.swift */; };
 		04834ABB22432D710076F341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834ABA22432D710076F341 /* AppDelegate.swift */; };
 		04834ABD22432D710076F341 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834ABC22432D710076F341 /* CalendarController.swift */; };
 		04834AC022432D710076F341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04834ABE22432D710076F341 /* Main.storyboard */; };
@@ -26,7 +27,6 @@
 		04E63DD12256B31F005943E9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E63DD02256B31F005943E9 /* NotificationController.swift */; };
 		04E63DD32256B5DF005943E9 /* SampleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E63DD22256B5DF005943E9 /* SampleTextField.swift */; };
 		04E63DD92256EA2C005943E9 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E63DD82256EA2C005943E9 /* ThemeViewController.swift */; };
-		04E63DDD22584D1F005943E9 /* ThemedCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E63DDC22584D1F005943E9 /* ThemedCardController.swift */; };
 		3BEAE94F72E99D07D491D628 /* Pods_Roomate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */; };
 		42F422ADD6EB9232BB1E92E3 /* Pods_RoomateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813DCB03F1AC6B4D63B4EED2 /* Pods_RoomateTests.framework */; };
 		88468100224EB5E600145BAE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884680FF224EB5E600145BAE /* TabBarController.swift */; };
@@ -55,6 +55,7 @@
 		0404B0C32253397B0071C0AF /* SigninController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninController.swift; sourceTree = "<group>"; };
 		0404B0C7225422020071C0AF /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		0404B0C9225435530071C0AF /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
+		0443686F225C284900AB5DD8 /* ThemedCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemedCardController.swift; sourceTree = "<group>"; };
 		04834AB722432D700076F341 /* Roomate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04834ABA22432D710076F341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04834ABC22432D710076F341 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		04E63DD02256B31F005943E9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		04E63DD22256B5DF005943E9 /* SampleTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTextField.swift; sourceTree = "<group>"; };
 		04E63DD82256EA2C005943E9 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
-		04E63DDC22584D1F005943E9 /* ThemedCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemedCardController.swift; path = ../../CardParts/Example/CardParts/ThemedCardController.swift; sourceTree = "<group>"; };
 		0DFEAFD40F8FD69D44F1A8CD /* Pods-RoomateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomateUITests.release.xcconfig"; path = "Target Support Files/Pods-RoomateUITests/Pods-RoomateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1AAF689A218B46B08C5F3114 /* Pods-Roomate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomate.debug.xcconfig"; path = "Target Support Files/Pods-Roomate/Pods-Roomate.debug.xcconfig"; sourceTree = "<group>"; };
 		565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				04E63DD82256EA2C005943E9 /* ThemeViewController.swift */,
-				04E63DDC22584D1F005943E9 /* ThemedCardController.swift */,
+				0443686F225C284900AB5DD8 /* ThemedCardController.swift */,
 				04E63DD22256B5DF005943E9 /* SampleTextField.swift */,
 				0404B0C12253235C0071C0AF /* RegisterController.swift */,
 				0404B0C32253397B0071C0AF /* SigninController.swift */,
@@ -494,7 +494,7 @@
 				04D1915C224EC62000E47F8D /* UserModel.swift in Sources */,
 				04E63DD12256B31F005943E9 /* NotificationController.swift in Sources */,
 				04834AC322432D710076F341 /* Roomate.xcdatamodeld in Sources */,
-				04E63DDD22584D1F005943E9 /* ThemedCardController.swift in Sources */,
+				04436870225C284900AB5DD8 /* ThemedCardController.swift in Sources */,
 				04E63DD92256EA2C005943E9 /* ThemeViewController.swift in Sources */,
 				04834ABB22432D710076F341 /* AppDelegate.swift in Sources */,
 				0404B0CA225435530071C0AF /* UserInfoController.swift in Sources */,
