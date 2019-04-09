@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VGY-QW-Npd">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,11 +16,11 @@
                 <navigationController id="D50-Qd-7EB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Expense" id="du4-PA-Jtb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="50z-OK-BMs">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Jip-q7-qL8" kind="relationship" relationship="rootViewController" id="HII-uw-zZI"/>
+                        <segue destination="Jip-q7-qL8" kind="relationship" relationship="rootViewController" id="vB8-4A-nsh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRm-JJ-kci" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -32,18 +32,18 @@
             <objects>
                 <viewController id="OXM-KL-Ude" customClass="CalendarController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ph-tL-3Nz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s5t-1C-5zU">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="Uls-dD-ldW"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-QM-LYE" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="88" width="414" height="357.00000000000023"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="357"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <viewLayoutGuide key="safeArea" id="QCh-k7-eYL"/>
                             </view>
@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Iv-8g-SgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429" y="503"/>
+            <point key="canvasLocation" x="1428" y="502.46305418719214"/>
         </scene>
         <!--Me-->
         <scene sceneID="xam-ra-KkY">
@@ -67,7 +67,7 @@
                 <navigationController id="Rio-zJ-1zL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Me" id="AlP-55-TbN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gD4-2H-VD3">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -83,11 +83,11 @@
             <objects>
                 <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="j4x-xA-wAV" customClass="UserInfoController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uAX-fB-OL4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XrK-uD-f2G">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Me" id="d81-eh-Tce"/>
@@ -160,26 +160,38 @@
             <objects>
                 <viewController id="Jip-q7-qL8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y4S-n7-RFR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R35-tu-XMi">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="9Pu-2U-HBc"/>
                                 </items>
                             </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="slF-39-HW7">
+                                <rect key="frame" x="16" y="88" width="343" height="641"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="zQq-Ja-49h" kind="embed" id="cWR-zy-Wlj"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ks4-X1-Tay"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                <color key="value" red="0.96068006753921509" green="0.96084433794021606" blue="0.96066969633102417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Expense" id="Umr-5Q-uKh"/>
                     <navigationItem key="navigationItem" title="expense" id="6Wx-RD-dby"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLv-aq-8yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429" y="1207"/>
+            <point key="canvasLocation" x="1428" y="1206.6502463054187"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="5nO-g4-hTn">
@@ -187,7 +199,7 @@
                 <navigationController id="Azn-S4-s0c" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" id="qOK-Ls-3ez"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J3o-pX-Oe6">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -204,7 +216,7 @@
                 <navigationController id="t4j-Ll-Duj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="nlQ-3k-Dnj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kLg-id-fWO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -220,18 +232,18 @@
             <objects>
                 <viewController id="1kz-72-ytr" customClass="NotificationController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODv-fD-A0B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0CI-Rw-809">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="QJR-1G-HZX"/>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iND-Of-g6e" customClass="PilasScrollView" customModule="Pilas">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                         </subviews>
@@ -246,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNc-ak-4if" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429" y="-226"/>
+            <point key="canvasLocation" x="1428" y="-226.10837438423647"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Rek-Lh-BJL">
@@ -267,6 +279,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ny-pL-ul5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-698" y="1263"/>
+        </scene>
+        <!--Theme View Controller-->
+        <scene sceneID="zXO-03-rS7">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="zQq-Ja-49h" customClass="ThemeViewController" customModule="Roomate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wHW-r7-2dN">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="641"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUF-aM-hF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2310" y="1207"/>
         </scene>
     </scenes>
 </document>
