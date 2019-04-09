@@ -284,11 +284,11 @@ open class CardsViewController : UIViewController, UICollectionViewDataSource, U
 //		let oldCardControllers = cardControllers
 		
 		if isHidden {
-			if let index = cardControllers.index(of: cardInfo) {
+			if let index = cardControllers.firstIndex(of: cardInfo) {
 				cardControllers.remove(at: index)
 			}
 		} else {
-			if cardControllers.index(of: cardInfo) == nil {
+			if cardControllers.firstIndex(of: cardInfo) == nil {
 				cardControllers.append(cardInfo)
 				cardControllers = cardControllers.sorted { $0.position < $1.position }
 			}
