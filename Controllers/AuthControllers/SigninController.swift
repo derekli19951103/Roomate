@@ -23,8 +23,8 @@ class SigninController: UIViewController,FetchDelegate {
     @IBAction func login(_ sender: Any) {
         var paramsDictionary = [String:Any]()
         paramsDictionary["email"]=email.text
-        paramsDictionary["password"]=password.text
-        fetch = Fetch(url: "http://localhost:8080/user/login",method: HttpMethod.POST,params:paramsDictionary)
+        paramsDictionary["password_hash"]=password.text
+        fetch = Fetch(url: "http://localhost:8080/userAPI/login",method: HttpMethod.POST,params:paramsDictionary)
         fetch?.delegate = self
         fetch?.then()
     }

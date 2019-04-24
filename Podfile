@@ -5,10 +5,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Roomate' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  
+  # Pods for Roomate
   pod 'FSCalendar'
   pod 'Pilas'
-  pod 'CardParts'
-  # Pods for Roomate
 
   target 'RoomateTests' do
     inherit! :search_paths

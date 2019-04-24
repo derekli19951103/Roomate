@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserModel: NSObject {
+class UserModel {
     
     //properties
     var id: Int?
@@ -19,14 +19,9 @@ class UserModel: NSObject {
     var email: String?
     var tel: String?
     var password: String?
-    
-    
-    //empty constructor
-    
-    override init()
-    {
-        
-    }
+    var created_date: String?
+    var requested_rooms: [RoomModel]?
+    var rooms: [RoomModel]?
     
     init(data: [String:Any]) {
         
@@ -37,24 +32,42 @@ class UserModel: NSObject {
         self.avatar = data["avatar"] as? String
         self.email = data["email"] as? String
         self.tel = data["tel"] as? String
+        self.created_date = data["created_date"] as? String
         self.password = data["password"] as? String
         
     }
     
+    func getRequested_rooms() -> [RoomModel] {
+        return requested_rooms!
+    }
+    
+    func setRequested_rooms(updatedRooms: [RoomModel]){
+        self.requested_rooms = updatedRooms
+    }
+    
+    func getRooms() -> [RoomModel] {
+        return rooms!
+    }
+    
+    func setRooms(updatedRooms: [RoomModel]){
+        self.rooms = updatedRooms
+    }
+    
     func to_dict(){
+        
         var paramsDictionary = [String:Any]()
-        paramsDictionary["firstname"]=firstname
-        paramsDictionary["lastname"]=lastname
-        paramsDictionary["birth"]=birth
-        paramsDictionary["avatar"]=avatar
-        paramsDictionary["email"]=email
-        paramsDictionary["tel"]=tel
-        paramsDictionary["password"]=password
+        paramsDictionary["firstname"] = firstname
+        paramsDictionary["lastname"] = lastname
+        paramsDictionary["birth"] = birth
+        paramsDictionary["avatar"] = avatar
+        paramsDictionary["email"] = email
+        paramsDictionary["tel"] = tel
+        paramsDictionary["password"] = password
     }
     
     //prints object's current state
     
-    override var description: String {
+    public var description: String {
         return "ID: \(String(describing: id)), firstname: \(firstname ?? "none"), lastname: \(lastname ?? "none")"
         
     }

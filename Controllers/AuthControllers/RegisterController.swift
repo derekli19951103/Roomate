@@ -32,7 +32,7 @@ class RegisterController: UIViewController,FetchDelegate {
             paramsDictionary["email"]=email.text
             paramsDictionary["tel"]=tel.text
             paramsDictionary["password"]=password.text
-            fetch = Fetch(url: "http://localhost:8080/user/add",method: HttpMethod.POST,params:paramsDictionary)
+            fetch = Fetch(url: "http://localhost:8080/userAPI/register",method: HttpMethod.POST,params:paramsDictionary)
             fetch?.delegate = self
             fetch?.then()
         }else{

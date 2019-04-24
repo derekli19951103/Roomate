@@ -12,10 +12,13 @@ class UserInfoController: UIViewController {
     
     var user:UserModel?
     @IBOutlet weak var firstname: UILabel!
-
+    @IBOutlet weak var roomname: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         firstname.text = user?.firstname
+        let rooms = user!.getRooms()
+        roomname.text = rooms[0].name
     }
     
     
