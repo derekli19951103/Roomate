@@ -24,11 +24,8 @@ class UserService {
         self.networking.post("/register", parameters: user) { result in
             switch result {
             case .success(let response):
-                let json = try? JSONSerialization.jsonObject(with: response.data, options: [])
-                if let dictionary = json as? [String: Any] {
-                    self.dataStack.sync([dictionary], inEntityNamed: User.entity().name!) { error in
-                        completion(.success)
-                    }
+                self.dataStack.sync([response.dictionaryBody], inEntityNamed: User.entity().name!) { error in
+                    completion(.success)
                 }
             case .failure(let response):
                 completion(.failure(response.error))
@@ -40,11 +37,8 @@ class UserService {
         self.networking.post("/login", parameters: info) { result in
             switch result {
             case .success(let response):
-                let json = try? JSONSerialization.jsonObject(with: response.data, options: [])
-                if let dictionary = json as? [String: Any] {
-                    self.dataStack.sync([dictionary], inEntityNamed: User.entity().name!) { error in
-                        completion(.success)
-                    }
+                self.dataStack.sync([response.dictionaryBody], inEntityNamed: User.entity().name!) { error in
+                    completion(.success)
                 }
             case .failure(let response):
                 completion(.failure(response.error))
