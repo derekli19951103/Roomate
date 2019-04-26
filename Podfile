@@ -9,6 +9,8 @@ target 'Roomate' do
   # Pods for Roomate
   pod 'FSCalendar'
   pod 'Pilas'
+  pod 'Sync', '~> 5'
+  pod 'Networking', '~> 4'
 
   target 'RoomateTests' do
     inherit! :search_paths

@@ -9,32 +9,33 @@
 import UIKit
 import Foundation
 
-class SigninController: UIViewController,FetchDelegate {
+class SigninController: UIViewController {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    var fetch:Fetch?
+    var userService = UserService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func login(_ sender: Any) {
-        var paramsDictionary = [String:Any]()
-        paramsDictionary["email"]=email.text
-        paramsDictionary["password_hash"]=password.text
-        fetch = Fetch(url: "http://localhost:8080/userAPI/login",method: HttpMethod.POST,params:paramsDictionary)
-        fetch?.delegate = self
-        fetch?.then()
-    }
-    
-    func didFinish(_ sender: Fetch) {
-        let user = UserModel(data: fetch!.data)
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let tab = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-        tab.user = user
-        self.present(tab, animated: true, completion: nil)
+        var info = [String:Any]()
+        info["email"]=email.text
+        info["password_hash"]=password.text
+        userService.login(info: info, completion: { result in
+            switch result {
+            case .success:
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let tab = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+                self.present(tab, animated: true, completion: nil)
+            case .failure(let error):
+                let alert = UIAlertController(title: "Alert", message: "Login Fail: \(error)", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {
