@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Request_Room" representedClassName="Request_Room" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="admin_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="availibility" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="create_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES">
+            <userInfo>
+                <entry key="sync.isPrimaryKey" value="true"/>
+            </userInfo>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publicity" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Request_User" representedClassName="Request_User" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES">
+            <userInfo>
+                <entry key="sync.isPrimaryKey" value="true"/>
+            </userInfo>
+        </attribute>
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="create_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password_hash" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Room" representedClassName="Room" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="admin_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -30,7 +59,9 @@
         <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Room" positionX="-36" positionY="81" width="128" height="165"/>
-        <element name="User" positionX="-54" positionY="-9" width="128" height="180"/>
+        <element name="Request_Room" positionX="-450" positionY="153" width="128" height="60"/>
+        <element name="Room" positionX="-256.234375" positionY="31.46875" width="128" height="165"/>
+        <element name="User" positionX="-687.66015625" positionY="69.015625" width="128" height="180"/>
+        <element name="Request_User" positionX="-486" positionY="117" width="128" height="60"/>
     </elements>
 </model>

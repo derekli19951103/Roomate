@@ -16,6 +16,8 @@
 		0475482C2270306B007FB2D0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475482B2270306B007FB2D0 /* CardView.swift */; };
 		0475482F22722AAB007FB2D0 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0475482E22722AAB007FB2D0 /* Create.storyboard */; };
 		047548312272A4D5007FB2D0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047548302272A4D5007FB2D0 /* UserService.swift */; };
+		0475483322737E17007FB2D0 /* CreateRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475483222737E17007FB2D0 /* CreateRoomController.swift */; };
+		0475483522737E2F007FB2D0 /* JoinRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475483422737E2F007FB2D0 /* JoinRoomController.swift */; };
 		04834ABB22432D710076F341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834ABA22432D710076F341 /* AppDelegate.swift */; };
 		04834ABD22432D710076F341 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834ABC22432D710076F341 /* CalendarController.swift */; };
 		04834AC022432D710076F341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04834ABE22432D710076F341 /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 		0475482B2270306B007FB2D0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0475482E22722AAB007FB2D0 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		047548302272A4D5007FB2D0 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		0475483222737E17007FB2D0 /* CreateRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomController.swift; sourceTree = "<group>"; };
+		0475483422737E2F007FB2D0 /* JoinRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomController.swift; sourceTree = "<group>"; };
 		04834AB722432D700076F341 /* Roomate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04834ABA22432D710076F341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04834ABC22432D710076F341 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
@@ -164,6 +168,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		0475483622737E55007FB2D0 /* CreateControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0475483222737E17007FB2D0 /* CreateRoomController.swift */,
+				0475483422737E2F007FB2D0 /* JoinRoomController.swift */,
+			);
+			path = CreateControllers;
+			sourceTree = "<group>";
+		};
 		04834AAE22432D700076F341 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +236,7 @@
 		04D1915E224EC6BD00E47F8D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0475483622737E55007FB2D0 /* CreateControllers */,
 				04754828226FFC09007FB2D0 /* AuthControllers */,
 				04754827226FFBFF007FB2D0 /* MainControllers */,
 			);
@@ -497,9 +511,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0475483322737E17007FB2D0 /* CreateRoomController.swift in Sources */,
 				0404B0C22253235C0071C0AF /* RegisterController.swift in Sources */,
 				04754824226FF74D007FB2D0 /* RoomAvailibility.swift in Sources */,
 				0404B0C42253397B0071C0AF /* SigninController.swift in Sources */,
+				0475483522737E2F007FB2D0 /* JoinRoomController.swift in Sources */,
 				04754826226FF75B007FB2D0 /* RoomPublicity.swift in Sources */,
 				04834ABD22432D710076F341 /* CalendarController.swift in Sources */,
 				04E63DD12256B31F005943E9 /* NotificationController.swift in Sources */,

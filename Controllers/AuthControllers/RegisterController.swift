@@ -35,9 +35,9 @@ class RegisterController: UIViewController {
             userService.register(user: user, completion: { result in
                 switch result {
                 case .success:
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let tab = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-                    self.present(tab, animated: true, completion: nil)
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Create", bundle: nil)
+                    let nav = storyBoard.instantiateViewController(withIdentifier: "RoomRegistration") as! UINavigationController
+                    self.present(nav, animated: true, completion: nil)
                 case .failure(let error):
                     let alert = UIAlertController(title: "Alert", message: "\(error)", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
