@@ -15,6 +15,7 @@ class UserInfoController: UIViewController {
     var userService = UserService()
     var users = [User]()
     var rooms = [Room]()
+    var divider_color = UIColor(red: 239, green: 239, blue: 239)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,20 +23,21 @@ class UserInfoController: UIViewController {
         self.rooms = userService.fetchLocalRooms()
         stackViewScrollView.enableKeyboardNotifications = false
         stackViewScrollView.showsVerticalScrollIndicator = false
-        stackViewScrollView.insertView(view: insertUserProfileView(), height: 200)
-        stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.gray)
+        stackViewScrollView.insertDividerView(height: 10, backgroundColor: divider_color)
+        stackViewScrollView.insertView(view: UserProfileSeg(), height: 200)
+        stackViewScrollView.insertDividerView(height: 10, backgroundColor: divider_color)
         stackViewScrollView.insertView(view: insertRoomProfileView(), height: 200)
-        stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.gray)
+        stackViewScrollView.insertDividerView(height: 10, backgroundColor: divider_color)
     }
     
-    func insertUserProfileView() -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250))
-        let headerLabel = UILabel(frame: CGRect(x: 10, y: 10, width: self.view.bounds.width, height: 20))
-        headerLabel.text = self.users[0].firstname
-        headerLabel.font = UIFont(name: headerLabel.font.fontName, size: 20)
-        view.addSubview(headerLabel)
+    func UserProfileSeg() -> UIView {
+        let view = UINib(nibName: "UserProfileSeg", bundle: nil).instantiate(withOwner: nil, options: nil).first as! UserProfileSeg
+        view.firstname.text = self.users[0].firstname
+        view.lastname.text = self.users[0].lastname
+        view.tel.text = self.users[0].tel
         return view
     }
+    
     
     func insertRoomProfileView() -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250))

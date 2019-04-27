@@ -31,7 +31,7 @@ class SigninController: UIViewController {
                 let tab = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
                 self.present(tab, animated: true, completion: nil)
             case .failure(let error):
-                let alert = UIAlertController(title: "Alert", message: "Login Fail: \(error)", preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "Alert", message: "Login Fail: \(error.domain)", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }

@@ -18,6 +18,8 @@
 		047548312272A4D5007FB2D0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047548302272A4D5007FB2D0 /* UserService.swift */; };
 		0475483322737E17007FB2D0 /* CreateRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475483222737E17007FB2D0 /* CreateRoomController.swift */; };
 		0475483522737E2F007FB2D0 /* JoinRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475483422737E2F007FB2D0 /* JoinRoomController.swift */; };
+		0476ABB622740FF70075D51F /* UserProfileSeg.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0476ABB522740FF70075D51F /* UserProfileSeg.xib */; };
+		0476ABB82274125B0075D51F /* UserProfileSeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476ABB72274125B0075D51F /* UserProfileSeg.swift */; };
 		04834ABB22432D710076F341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834ABA22432D710076F341 /* AppDelegate.swift */; };
 		04834ABD22432D710076F341 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834ABC22432D710076F341 /* CalendarController.swift */; };
 		04834AC022432D710076F341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04834ABE22432D710076F341 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		047548302272A4D5007FB2D0 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		0475483222737E17007FB2D0 /* CreateRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomController.swift; sourceTree = "<group>"; };
 		0475483422737E2F007FB2D0 /* JoinRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomController.swift; sourceTree = "<group>"; };
+		0476ABB522740FF70075D51F /* UserProfileSeg.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileSeg.xib; sourceTree = "<group>"; };
+		0476ABB72274125B0075D51F /* UserProfileSeg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSeg.swift; sourceTree = "<group>"; };
 		04834AB722432D700076F341 /* Roomate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04834ABA22432D710076F341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04834ABC22432D710076F341 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			children = (
 				04834AEB22433D650076F341 /* RoundedButton.swift */,
 				0475482B2270306B007FB2D0 /* CardView.swift */,
+				0476ABB72274125B0075D51F /* UserProfileSeg.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -177,9 +182,18 @@
 			path = CreateControllers;
 			sourceTree = "<group>";
 		};
+		0476ABB422740FD90075D51F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0476ABB522740FF70075D51F /* UserProfileSeg.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		04834AAE22432D700076F341 = {
 			isa = PBXGroup;
 			children = (
+				0476ABB422740FD90075D51F /* Views */,
 				0404B0C6225421360071C0AF /* Storyboards */,
 				04D1915E224EC6BD00E47F8D /* Controllers */,
 				0475482D227051DC007FB2D0 /* Components */,
@@ -389,6 +403,7 @@
 				0404B0C8225422020071C0AF /* Auth.storyboard in Resources */,
 				04834AC822432D720076F341 /* LaunchScreen.storyboard in Resources */,
 				04834AC522432D720076F341 /* Assets.xcassets in Resources */,
+				0476ABB622740FF70075D51F /* UserProfileSeg.xib in Resources */,
 				04834AC022432D710076F341 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +540,7 @@
 				88468100224EB5E600145BAE /* TabBarController.swift in Sources */,
 				0475482C2270306B007FB2D0 /* CardView.swift in Sources */,
 				047548312272A4D5007FB2D0 /* UserService.swift in Sources */,
+				0476ABB82274125B0075D51F /* UserProfileSeg.swift in Sources */,
 				04834AEC22433D650076F341 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
