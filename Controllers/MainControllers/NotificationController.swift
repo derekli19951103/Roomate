@@ -57,7 +57,9 @@ class NotificationController: UIViewController{
     
     
     private func setupCardView(){
-        stackViewScrollView.insertView(view: CardView(width: view.bounds.width, height: 200), height: 200)
+         let view = UINib(nibName: "CardView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CardView
+        view.expense_desc.text="ahsdjgasgd"
+        stackViewScrollView.insertView(view: view,height: 200)
         stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.white)
     }
 }
