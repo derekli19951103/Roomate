@@ -6,7 +6,7 @@ class UserService {
     private let dataStack: DataStack
 
     private lazy var networking: Networking = {
-        Networking(baseURL: "http://localhost:8080/userAPI")
+        Networking(baseURL: "http://localhost:8080/user")
     }()
 
     init() {
@@ -32,8 +32,22 @@ class UserService {
         return try! self.dataStack.viewContext.fetch(request)
     }
     
-    func register(user: [String:Any], completion: @escaping (_ result: VoidResult) -> ()) {
-        self.networking.post("/register", parameters: user) { result in
+    func getRooms(completion: @escaping (_ result: VoidResult) -> ()) {
+        let user_id = fetchLocalUsers()[0].id
+        self.networking.get("/\(user_id)/rooms") { result in
+            switch result {
+            case .success(let response):
+                self.dataStack.sync(response.arrayBody, inEntityNamed: Room.entity().name!) { error in
+                    completion(.success)
+                }
+            case .failure(let response):
+                completion(.failure(response.error))
+            }
+        }
+    }
+    
+    func register(info: [String:Any], completion: @escaping (_ result: VoidResult) -> ()) {
+        self.networking.post("/register", parameters: info) { result in
             switch result {
             case .success(let response):
                 self.dataStack.sync([response.dictionaryBody], inEntityNamed: User.entity().name!) { error in
@@ -63,9 +77,9 @@ class UserService {
         }
     }
     
-    func get_rooms(completion: @escaping (_ result: VoidResult) -> ()) {
+    func createRoom(info: [String:Any], completion: @escaping (_ result: VoidResult) -> ()) {
         let user_id = fetchLocalUsers()[0].id
-        self.networking.get("/\(user_id)/rooms") { result in
+        self.networking.post("/\(user_id)/room", parameters: info) { result in
             switch result {
             case .success(let response):
                 self.dataStack.sync(response.arrayBody, inEntityNamed: Room.entity().name!) { error in
@@ -77,9 +91,9 @@ class UserService {
         }
     }
     
-    func get_requested_rooms(completion: @escaping (_ result: VoidResult) -> ()) {
+    func requestRoom(room_id: Int64, completion: @escaping (_ result: VoidResult) -> ()) {
         let user_id = fetchLocalUsers()[0].id
-        self.networking.get("/\(user_id)/requested_rooms") { result in
+        self.networking.post("/\(user_id)/request_room?room_id=\(room_id)") { result in
             switch result {
             case .success(let response):
                 self.dataStack.sync(response.arrayBody, inEntityNamed: Request_Room.entity().name!) { error in
@@ -91,75 +105,6 @@ class UserService {
         }
     }
     
-    func updateUser(user: User, completion: @escaping (_ result: VoidResult) -> ()) {
-        let user_id = fetchLocalUsers()[0].id
-        self.networking.put("/\(user_id)/update", parameterType: .json, parameters: user.export()) { result in
-            switch result {
-            case .success(let response):
-                self.dataStack.sync(response.arrayBody, inEntityNamed: User.entity().name!) { error in
-                    completion(.success)
-                }
-            case .failure(let response):
-                completion(.failure(response.error))
-            }
-        }
-    }
-    
-    func create_room(info: [String:Any], completion: @escaping (_ result: VoidResult) -> ()) {
-        let user_id = fetchLocalUsers()[0].id
-        self.networking.post("/\(user_id)/create_room", parameters: info) { result in
-            switch result {
-            case .success(let response):
-                self.dataStack.sync(response.arrayBody, inEntityNamed: Room.entity().name!) { error in
-                    completion(.success)
-                }
-            case .failure(let response):
-                completion(.failure(response.error))
-            }
-        }
-    }
-    
-    func request_room(room_id: Int64, completion: @escaping (_ result: VoidResult) -> ()) {
-        let user_id = fetchLocalUsers()[0].id
-        self.networking.post("/\(user_id)/request_room/\(room_id)") { result in
-            switch result {
-            case .success(let response):
-                self.dataStack.sync(response.arrayBody, inEntityNamed: Request_Room.entity().name!) { error in
-                    completion(.success)
-                }
-            case .failure(let response):
-                completion(.failure(response.error))
-            }
-        }
-    }
-    
-    func exit_room(room_id: Int64, completion: @escaping (_ result: VoidResult) -> ()) {
-        let user_id = fetchLocalUsers()[0].id
-        self.networking.post("/\(user_id)/exit_room/\(room_id)") { result in
-            switch result {
-            case .success(let response):
-                self.dataStack.sync(response.arrayBody, inEntityNamed: Room.entity().name!) { error in
-                    completion(.success)
-                }
-            case .failure(let response):
-                completion(.failure(response.error))
-            }
-        }
-    }
-    
-    func derequest_room(room_id: Int64, completion: @escaping (_ result: VoidResult) -> ()) {
-        let user_id = fetchLocalUsers()[0].id
-        self.networking.post("/\(user_id)/derequest_room/\(room_id)", parameterType: .json) { result in
-            switch result {
-            case .success(let response):
-                self.dataStack.sync(response.arrayBody, inEntityNamed: Request_Room.entity().name!) { error in
-                    completion(.success)
-                }
-            case .failure(let response):
-                completion(.failure(response.error))
-            }
-        }
-    }
 }
 
 enum VoidResult {

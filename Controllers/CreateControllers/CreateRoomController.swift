@@ -40,7 +40,7 @@ class CreateRoomController: UIViewController{
         room["address"]=address.text
         room["availibility"]=RoomAvailibility.ACTIVE.rawValue
         room["publicity"]=publicity.rawValue
-        userService.create_room(info: room, completion: { result in
+        userService.createRoom(info: room, completion: { result in
             switch result {
             case .success:
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

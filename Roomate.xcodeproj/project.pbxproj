@@ -31,6 +31,7 @@
 		04834AD322432D720076F341 /* RoomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834AD222432D720076F341 /* RoomateTests.swift */; };
 		04834ADE22432D720076F341 /* RoomateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834ADD22432D720076F341 /* RoomateUITests.swift */; };
 		04834AEC22433D650076F341 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04834AEB22433D650076F341 /* RoundedButton.swift */; };
+		04910BBA227D30A7004F283A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04910BB9227D30A7004F283A /* UIColorExtension.swift */; };
 		04E63DD12256B31F005943E9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E63DD02256B31F005943E9 /* NotificationController.swift */; };
 		3BEAE94F72E99D07D491D628 /* Pods_Roomate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */; };
 		42F422ADD6EB9232BB1E92E3 /* Pods_RoomateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813DCB03F1AC6B4D63B4EED2 /* Pods_RoomateTests.framework */; };
@@ -86,6 +87,7 @@
 		04834ADD22432D720076F341 /* RoomateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomateUITests.swift; sourceTree = "<group>"; };
 		04834ADF22432D720076F341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04834AEB22433D650076F341 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		04910BB9227D30A7004F283A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		04E63DD02256B31F005943E9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		0DFEAFD40F8FD69D44F1A8CD /* Pods-RoomateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomateUITests.release.xcconfig"; path = "Target Support Files/Pods-RoomateUITests/Pods-RoomateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1AAF689A218B46B08C5F3114 /* Pods-Roomate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomate.debug.xcconfig"; path = "Target Support Files/Pods-Roomate/Pods-Roomate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		04834AAE22432D700076F341 = {
 			isa = PBXGroup;
 			children = (
+				04910BB8227D3083004F283A /* Utils */,
 				0476ABB422740FD90075D51F /* Views */,
 				0404B0C6225421360071C0AF /* Storyboards */,
 				04D1915E224EC6BD00E47F8D /* Controllers */,
@@ -251,6 +254,14 @@
 				04834ADF22432D720076F341 /* Info.plist */,
 			);
 			path = RoomateUITests;
+			sourceTree = "<group>";
+		};
+		04910BB8227D3083004F283A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04910BB9227D30A7004F283A /* UIColorExtension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		04D1915E224EC6BD00E47F8D /* Controllers */ = {
@@ -534,6 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04910BBA227D30A7004F283A /* UIColorExtension.swift in Sources */,
 				0475483322737E17007FB2D0 /* CreateRoomController.swift in Sources */,
 				0404B0C22253235C0071C0AF /* RegisterController.swift in Sources */,
 				04754824226FF74D007FB2D0 /* RoomAvailibility.swift in Sources */,

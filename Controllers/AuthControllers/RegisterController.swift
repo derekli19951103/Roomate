@@ -32,7 +32,7 @@ class RegisterController: UIViewController {
             user["email"]=email.text
             user["tel"]=tel.text
             user["password_hash"]=password.text
-            userService.register(user: user, completion: { result in
+            userService.register(info: user, completion: { result in
                 switch result {
                 case .success:
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Create", bundle: nil)

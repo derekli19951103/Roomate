@@ -23,7 +23,7 @@ class JoinRoomController: UIViewController{
     
     @IBAction func join_room(_ sender: Any) {
         let room_id = self.room_id.text
-        userService.request_room(room_id: Int64(room_id!)!, completion: { result in
+        userService.requestRoom(room_id: Int64(room_id!)!, completion: { result in
             switch result {
             case .success:
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
