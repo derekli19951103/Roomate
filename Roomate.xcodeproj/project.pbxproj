@@ -36,6 +36,9 @@
 		3BEAE94F72E99D07D491D628 /* Pods_Roomate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */; };
 		42F422ADD6EB9232BB1E92E3 /* Pods_RoomateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813DCB03F1AC6B4D63B4EED2 /* Pods_RoomateTests.framework */; };
 		88468100224EB5E600145BAE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884680FF224EB5E600145BAE /* TabBarController.swift */; };
+		88C92DB1228604D10067B288 /* RootApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C92DB0228604D10067B288 /* RootApi.swift */; };
+		88F4E01B22865A0E00AF0751 /* CreateExpenseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F4E01A22865A0E00AF0751 /* CreateExpenseController.swift */; };
+		88F4E01D2288B75100AF0751 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F4E01C2288B75100AF0751 /* StringExtension.swift */; };
 		F0A8EDE7A0E145162095808C /* Pods_RoomateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC3A9FEC8FDD6AC6EA63A33 /* Pods_RoomateUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +97,9 @@
 		565BD8ED5E7E5F7A3D6718F8 /* Pods_Roomate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		813DCB03F1AC6B4D63B4EED2 /* Pods_RoomateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		884680FF224EB5E600145BAE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		88C92DB0228604D10067B288 /* RootApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootApi.swift; sourceTree = "<group>"; };
+		88F4E01A22865A0E00AF0751 /* CreateExpenseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExpenseController.swift; sourceTree = "<group>"; };
+		88F4E01C2288B75100AF0751 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		8BC3A9FEC8FDD6AC6EA63A33 /* Pods_RoomateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B341C75A4A8C26C26E64AF /* Pods-RoomateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomateTests.debug.xcconfig"; path = "Target Support Files/Pods-RoomateTests/Pods-RoomateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF749F872DBB45CFA0CBA6CD /* Pods-RoomateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomateTests.release.xcconfig"; path = "Target Support Files/Pods-RoomateTests/Pods-RoomateTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 			children = (
 				0475483222737E17007FB2D0 /* CreateRoomController.swift */,
 				0475483422737E2F007FB2D0 /* JoinRoomController.swift */,
+				88F4E01A22865A0E00AF0751 /* CreateExpenseController.swift */,
 			);
 			path = CreateControllers;
 			sourceTree = "<group>";
@@ -201,6 +208,7 @@
 		04834AAE22432D700076F341 = {
 			isa = PBXGroup;
 			children = (
+				88C92DAF228604AC0067B288 /* Constants */,
 				04910BB8227D3083004F283A /* Utils */,
 				0476ABB422740FD90075D51F /* Views */,
 				0404B0C6225421360071C0AF /* Storyboards */,
@@ -260,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				04910BB9227D30A7004F283A /* UIColorExtension.swift */,
+				88F4E01C2288B75100AF0751 /* StringExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -303,6 +312,14 @@
 				0DFEAFD40F8FD69D44F1A8CD /* Pods-RoomateUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		88C92DAF228604AC0067B288 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				88C92DB0228604D10067B288 /* RootApi.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,6 +564,7 @@
 			files = (
 				04910BBA227D30A7004F283A /* UIColorExtension.swift in Sources */,
 				0475483322737E17007FB2D0 /* CreateRoomController.swift in Sources */,
+				88F4E01B22865A0E00AF0751 /* CreateExpenseController.swift in Sources */,
 				0404B0C22253235C0071C0AF /* RegisterController.swift in Sources */,
 				04754824226FF74D007FB2D0 /* RoomAvailibility.swift in Sources */,
 				0404B0C42253397B0071C0AF /* SigninController.swift in Sources */,
@@ -556,7 +574,9 @@
 				04834ABD22432D710076F341 /* CalendarController.swift in Sources */,
 				04E63DD12256B31F005943E9 /* NotificationController.swift in Sources */,
 				04834AC322432D710076F341 /* Roomate.xcdatamodeld in Sources */,
+				88F4E01D2288B75100AF0751 /* StringExtension.swift in Sources */,
 				04834ABB22432D710076F341 /* AppDelegate.swift in Sources */,
+				88C92DB1228604D10067B288 /* RootApi.swift in Sources */,
 				0404B0CA225435530071C0AF /* UserInfoController.swift in Sources */,
 				88468100224EB5E600145BAE /* TabBarController.swift in Sources */,
 				047548312272A4D5007FB2D0 /* UserService.swift in Sources */,

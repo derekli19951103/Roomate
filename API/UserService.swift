@@ -91,6 +91,23 @@ class UserService {
         }
     }
     
+    func createExpense(info:[String:Any], room_id: Int64, all_users: [Int64], completion: @escaping (_ result: VoidResult) -> ()) {
+        let user_id = 1
+        let all_user_list = all_users.map{ String($0)}
+        let all_user_str = all_user_list.joined(separator: ",")
+        self.networking.post("/\(user_id)/expense?room_id=\(room_id)&user_ids=\(all_user_str)", parameters: info) { result in
+            switch result {
+            case .success(let response):
+                self.dataStack.sync(response.arrayBody, inEntityNamed: Expense.entity().name!) {
+                    error in completion(.success)
+                }
+            case .failure(let response):
+                completion(.failure(response.error))
+            }
+        }
+        
+    }
+    
     func requestRoom(room_id: Int64, completion: @escaping (_ result: VoidResult) -> ()) {
         let user_id = fetchLocalUsers()[0].id
         self.networking.post("/\(user_id)/request_room?room_id=\(room_id)") { result in
